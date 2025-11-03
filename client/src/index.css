@@ -2,17 +2,19 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0C0C0F;
+  background-color: #000000;
   color: #EAEAEA;
   letter-spacing: 0.5px;
-  background: #0C0C0F radial-gradient(circle at top left, rgba(150,90,255,0.15), transparent 70%);
+  background: #000000 radial-gradient(circle at top left, rgba(150, 90, 255, 0.15), transparent 70%);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 h1 {

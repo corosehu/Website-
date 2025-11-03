@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Hi, I’m Tony 👋 — Your Instagram Growth Expert</h1>
+        <h1>Hi, I’m Tony — Your Instagram Growth Expert</h1>
         <p>Delivering 100% Trusted • Fast • Genuine Services</p>
         <div className="hero-buttons">
           <a href="#work" className="btn btn-primary">View My Work</a>

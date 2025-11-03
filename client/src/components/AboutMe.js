@@ -13,15 +13,12 @@ const AboutMe = () => {
         </p>
         <div className="features">
           <div className="feature-card">
-            <span>⚡</span>
             <h3>Fast Work</h3>
           </div>
           <div className="feature-card">
-            <span>💯</span>
             <h3>Trusted Deals</h3>
           </div>
           <div className="feature-card">
-            <span>🌍</span>
             <h3>Worldwide Clients</h3>
           </div>
         </div>

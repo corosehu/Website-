@@ -9,27 +9,32 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AnimatedSection from './components/AnimatedSection';
 
+const SectionDivider = () => <div className="section-divider" />;
+
 function App() {
   return (
     <div className="App">
-      <AnimatedSection>
-        <Hero />
-      </AnimatedSection>
+      <Hero />
       <AnimatedSection>
         <AboutMe />
       </AnimatedSection>
+      <SectionDivider />
       <AnimatedSection>
         <Services />
       </AnimatedSection>
+      <SectionDivider />
       <AnimatedSection>
         <Workflow />
       </AnimatedSection>
+      <SectionDivider />
       <AnimatedSection>
         <Channels />
       </AnimatedSection>
+      <SectionDivider />
       <AnimatedSection>
         <FAQ />
       </AnimatedSection>
+      <SectionDivider />
       <AnimatedSection>
         <Contact />
       </AnimatedSection>
