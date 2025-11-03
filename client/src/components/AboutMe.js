@@ -4,7 +4,7 @@ import './AboutMe.css';
 const AboutMe = () => {
   return (
     <section className="about-me">
-      <div className="about-me-content">
+      <div className="about-me-content glass-panel">
         <h2>Who I Am</h2>
         <p>
           I’m Tony, a professional Instagram specialist focused on delivering fast and safe results.
@@ -13,13 +13,13 @@ const AboutMe = () => {
         </p>
         <div className="features">
           <div className="feature-card">
-            <h3>Fast Work</h3>
+            <h3>⚡ Fast Work</h3>
           </div>
           <div className="feature-card">
-            <h3>Trusted Deals</h3>
+            <h3>💯 Trusted Deals</h3>
           </div>
           <div className="feature-card">
-            <h3>Worldwide Clients</h3>
+            <h3>🌍 Worldwide Clients</h3>
           </div>
         </div>
       </div>

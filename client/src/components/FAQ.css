@@ -9,11 +9,6 @@
 }
 
 .accordion-item {
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 15px rgba(150, 90, 255, 0.4);
   margin-bottom: 15px;
 }
 
@@ -21,7 +16,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
   cursor: pointer;
 }
 
@@ -44,14 +38,10 @@
   padding: 0 30px 20px;
   margin: 0;
   text-align: left;
-  color: #A9B4C2;
 }
 
 @media (max-width: 768px) {
   .faq {
     padding: 60px 20px;
-  }
-  .accordion-item {
-    box-shadow: 0 0 10px rgba(150, 90, 255, 0.2);
   }
 }

@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import './Channels.css';
 
 const links = [
@@ -11,17 +14,46 @@ const links = [
 ];
 
 const Channels = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section className="channels">
       <h2>Where You Can Find Me</h2>
-      <div className="links-grid">
-        {links.map((link, index) => (
-          <a href={link.url} className="link-card" key={index} target="_blank" rel="noopener noreferrer">
-            <i className={link.icon}></i>
-            <h3>{link.name}</h3>
-          </a>
-        ))}
-      </div>
+      {isMobile ? (
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={10}
+          pagination={{ clickable: true }}
+          className="mySwiper"
+        >
+          {links.map((link, index) => (
+            <SwiperSlide key={index}>
+              <a href={link.url} className="link-card glass-panel" target="_blank" rel="noopener noreferrer">
+                <i className={link.icon}></i>
+                <h3>{link.name}</h3>
+              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        <div className="links-grid">
+          {links.map((link, index) => (
+            <a href={link.url} className="link-card glass-panel" key={index} target="_blank" rel="noopener noreferrer">
+              <i className={link.icon}></i>
+              <h3>{link.name}</h3>
+            </a>
+          ))}
+        </div>
+      )}
     </section>
   );
 };

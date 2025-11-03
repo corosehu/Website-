@@ -39,7 +39,7 @@ const FAQ = () => {
       <h2>Got Questions?</h2>
       <div className="accordion">
         {faqs.map((faq, index) => (
-          <div className="accordion-item" key={index}>
+          <div className="accordion-item glass-panel" key={index}>
             <div className="accordion-title" onClick={() => toggle(index)}>
               <h3>{faq.question}</h3>
               <span>{open === index ? '-' : '+'}</span>

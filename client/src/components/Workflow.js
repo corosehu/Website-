@@ -16,7 +16,7 @@ const Workflow = () => {
       <div className="timeline">
         {steps.map((step, index) => (
           <div className="timeline-item" key={index}>
-            <div className="timeline-content">
+            <div className="timeline-content glass-panel">
               <h3>{step.title}</h3>
               <p>{step.description}</p>
             </div>

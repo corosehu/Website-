@@ -16,7 +16,7 @@ const Services = () => {
       <h2>Services That Deliver Results</h2>
       <div className="services-grid">
         {services.map((service, index) => (
-          <div className="service-card" key={index}>
+          <div className="service-card glass-panel" key={index}>
             <h3>{service.title}</h3>
           </div>
         ))}

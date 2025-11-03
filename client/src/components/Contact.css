@@ -1,37 +1,9 @@
 .contact {
-  padding: 100px 20px;
   text-align: center;
 }
 
-.contact p {
-  color: #A9B4C2;
-}
-
-.btn-contact {
-  display: inline-block;
-  padding: 12px 30px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  color: #EAEAEA;
-  box-shadow: 0 0 15px rgba(150, 90, 255, 0.4);
-}
-
-.btn-contact:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(150, 90, 255, 0.4);
-}
-
 @media (max-width: 768px) {
-  .contact {
-    padding: 60px 20px;
-  }
-  .btn-contact {
+  .btn {
     width: 100%;
-    box-shadow: 0 0 10px rgba(150, 90, 255, 0.2);
   }
 }

@@ -10,15 +10,12 @@
   text-align: center;
 }
 
-.about-me p {
-  color: #A9B4C2;
-}
-
 .features {
   display: flex;
   justify-content: space-around;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .feature-card {
@@ -26,8 +23,7 @@
   backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 15px rgba(150, 90, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   width: 200px;
   transition: all 0.3s ease;
 }
@@ -35,10 +31,6 @@
 .feature-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 20px rgba(150, 90, 255, 0.4);
-}
-
-.feature-card span {
-  font-size: 2rem;
 }
 
 .feature-card h3 {
@@ -56,6 +48,5 @@
   }
   .feature-card {
     width: 100%;
-    box-shadow: 0 0 10px rgba(150, 90, 255, 0.2);
   }
 }
