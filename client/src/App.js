@@ -3,9 +3,7 @@ import Hero from './components/Hero';
 import AboutMe from './components/AboutMe';
 import Services from './components/Services';
 import Workflow from './components/Workflow';
-import CaseStudies from './components/CaseStudies';
 import Channels from './components/Channels';
-import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -27,13 +25,7 @@ function App() {
         <Workflow />
       </AnimatedSection>
       <AnimatedSection>
-        <CaseStudies />
-      </AnimatedSection>
-      <AnimatedSection>
         <Channels />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Testimonials />
       </AnimatedSection>
       <AnimatedSection>
         <FAQ />

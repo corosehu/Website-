@@ -1,9 +1,9 @@
 .footer {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(10px);
   padding: 20px;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-content {
@@ -15,15 +15,19 @@
   flex-wrap: wrap;
 }
 
+.footer-content p {
+  color: #A9B4C2;
+}
+
 .footer-links a {
-  color: #ffffff;
+  color: #EAEAEA;
   text-decoration: none;
   margin: 0 10px;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #a0a0a0;
+  color: #A9B4C2;
 }
 
 @media (max-width: 768px) {

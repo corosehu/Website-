@@ -22,9 +22,9 @@ const AnimatedSection = ({ children }) => {
       animate={controls}
       variants={{
         visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 50 },
+        hidden: { opacity: 0, y: 20 },
       }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.6 }}
     >
       {children}
     </motion.div>
