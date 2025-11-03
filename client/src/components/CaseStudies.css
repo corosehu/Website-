@@ -1,0 +1,48 @@
+.case-studies {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.case-studies h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.study-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.study-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+.study-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.study-card h3 {
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .studies-grid {
+    grid-template-columns: 1fr;
+  }
+}
