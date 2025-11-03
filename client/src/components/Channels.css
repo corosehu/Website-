@@ -1,45 +1,80 @@
 .channels {
-  padding: 100px 20px;
+  padding: 4rem 2rem;
   text-align: center;
+}
+
+.channels h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-weight: 600;
 }
 
 .links-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .link-card {
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(10px);
-  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 15px rgba(150, 90, 255, 0.4);
+  padding: 2rem;
   text-decoration: none;
-  color: #EAEAEA;
+  color: #fff;
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.link-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(173, 216, 230, 0.1), transparent, transparent);
+  transform: rotate(0deg);
+  transition: transform 0.5s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.link-card:hover::before {
+  transform: rotate(180deg);
 }
 
 .link-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(150, 90, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(173, 216, 230, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(173, 216, 230, 0.2);
+}
+
+.link-card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #add8e6;
+  transition: color 0.3s ease;
+  z-index: 2;
+}
+
+.link-card:hover i {
+  color: #fff;
 }
 
 .link-card h3 {
-  font-size: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .channels {
-    padding: 60px 20px;
-  }
-  .links-grid {
-    grid-template-columns: 1fr;
-  }
-  .link-card {
-    box-shadow: 0 0 10px rgba(150, 90, 255, 0.2);
-  }
+  font-size: 1.2rem;
+  font-weight: 500;
+  z-index: 2;
 }

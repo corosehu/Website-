@@ -2,12 +2,12 @@ import React from 'react';
 import './Channels.css';
 
 const links = [
-  { name: 'Main Portal', url: 'https://t.me/heartsaved' },
-  { name: 'Shop Channel', url: 'https://t.me/+xW9i8aYsyoBlNGU1' },
-  { name: 'Vouch Channel', url: 'https://t.me/TrueVia' },
-  { name: 'OGU Profile', url: 'http://Oguser.com/corose' },
-  { name: 'Work Profile', url: 'https://t.me/+-0TTqbxQ-mJmOWJl' },
-  { name: 'TOS', url: 'https://t.me/CoroseTerms' },
+  { name: 'Main Portal', url: 'https://t.me/heartsaved', icon: 'fas fa-compass' },
+  { name: 'Shop Channel', url: 'https://t.me/+xW9i8aYsyoBlNGU1', icon: 'fas fa-store' },
+  { name: 'Vouch Channel', url: 'https://t.me/TrueVia', icon: 'fas fa-check-circle' },
+  { name: 'OGU Profile', url: 'http://Oguser.com/corose', icon: 'fas fa-user-circle' },
+  { name: 'Work Profile', url: 'https://t.me/+-0TTqbxQ-mJmOWJl', icon: 'fas fa-briefcase' },
+  { name: 'TOS', url: 'https://t.me/CoroseTerms', icon: 'fas fa-file-alt' },
 ];
 
 const Channels = () => {
@@ -17,6 +17,7 @@ const Channels = () => {
       <div className="links-grid">
         {links.map((link, index) => (
           <a href={link.url} className="link-card" key={index} target="_blank" rel="noopener noreferrer">
+            <i className={link.icon}></i>
             <h3>{link.name}</h3>
           </a>
         ))}

@@ -4,14 +4,27 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-jest.mock('react-intersection-observer', () => ({
-  useInView: () => ([jest.fn(), true]),
-}));
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
 
-jest.mock('framer-motion', () => ({
-  ...jest.requireActual('framer-motion'),
-  motion: {
-    div: jest.fn().mockImplementation(({ children }) => children),
-  },
-  useAnimation: () => ([{ start: jest.fn() }]),
-}));
+  disconnect() {}
+
+  observe() {}
+
+  unobserve() {}
+};
+
+jest.mock('framer-motion', () => {
+  const React = jest.requireActual('react');
+  const framerMotion = jest.requireActual('framer-motion');
+
+  return {
+    ...framerMotion,
+    motion: {
+      ...framerMotion.motion,
+      div: React.forwardRef((props, ref) => {
+        return <div {...props} ref={ref} />;
+      }),
+    },
+  };
+});

@@ -16,6 +16,10 @@ function App() {
     <div className="App">
       <Hero />
       <AnimatedSection>
+        <Channels />
+      </AnimatedSection>
+      <SectionDivider />
+      <AnimatedSection>
         <AboutMe />
       </AnimatedSection>
       <SectionDivider />
@@ -25,10 +29,6 @@ function App() {
       <SectionDivider />
       <AnimatedSection>
         <Workflow />
-      </AnimatedSection>
-      <SectionDivider />
-      <AnimatedSection>
-        <Channels />
       </AnimatedSection>
       <SectionDivider />
       <AnimatedSection>
