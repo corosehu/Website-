@@ -6,22 +6,68 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 2rem; /* Increased gap for better spacing */
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2rem auto 0; /* Added top margin */
 }
 
 .service-card {
+  /* Inherit the new glass-panel style */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 2.5rem; /* Increased padding */
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem; /* Increased gap */
+  position: relative; /* For pseudo-element border */
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  background: linear-gradient(45deg, #965AFF, #3B1B9C) border-box;
+  -webkit-mask:
+     linear-gradient(#fff 0 0) padding-box,
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(150, 90, 255, 0.4);
+  box-shadow: 0 0 30px rgba(150, 90, 255, 0.6);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card svg {
+  color: #F1F1F3;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover svg {
+  color: #965AFF;
+  transform: scale(1.1);
 }
 
 .service-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Adjusted font size */
+  margin: 0;
 }
 
 @media (max-width: 768px) {

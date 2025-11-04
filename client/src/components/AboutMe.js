@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutMe.css';
+import { FiZap, FiShield, FiGlobe } from 'react-icons/fi';
 
 const AboutMe = () => {
   return (
@@ -13,13 +14,16 @@ const AboutMe = () => {
         </p>
         <div className="features">
           <div className="feature-card">
-            <h3>⚡ Fast Work</h3>
+            <FiZap size={28} />
+            <h3>Fast Work</h3>
           </div>
           <div className="feature-card">
-            <h3>💯 Trusted Deals</h3>
+            <FiShield size={28} />
+            <h3>Trusted Deals</h3>
           </div>
           <div className="feature-card">
-            <h3>🌍 Worldwide Clients</h3>
+            <FiGlobe size={28} />
+            <h3>Worldwide Clients</h3>
           </div>
         </div>
       </div>

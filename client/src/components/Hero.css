@@ -6,28 +6,54 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  padding: 100px 20px;
+  padding: 4rem 1rem; /* Use consistent units */
+  box-sizing: border-box; /* Include padding in height calculation */
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
+  max-width: 900px; /* Constrain width for larger screens */
 }
 
-.hero-buttons .btn {
-  margin: 10px;
+.hero h1 {
+  font-size: 3.5rem; /* Slightly larger heading */
 }
 
+.hero p {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* --- Mobile Specific Fixes --- */
 @media (max-width: 768px) {
   .hero {
-    padding: 60px 20px;
+    min-height: 90vh; /* Reduced height for mobile */
+    padding: 2rem 1rem;
   }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Adjust heading size for mobile */
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
   .hero-buttons {
-    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
+
   .hero-buttons .btn {
     width: 100%;
+    max-width: 300px; /* Prevent buttons from being too wide */
   }
 }

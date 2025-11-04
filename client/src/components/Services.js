@@ -1,13 +1,14 @@
 import React from 'react';
 import './Services.css';
+import { FiTrendingUp, FiCheckSquare, FiUsers, FiShare2, FiBriefcase, FiLock } from 'react-icons/fi';
 
 const services = [
-  { title: 'Instagram Growth & Engagement' },
-  { title: 'Account Setup, Recovery & Verification' },
-  { title: 'Niche Audience Targeting' },
-  { title: 'Influencer Collaboration Setup' },
-  { title: 'Brand Consulting' },
-  { title: 'Safe Middleman Deals' },
+  { icon: <FiTrendingUp size={32} />, title: 'Instagram Growth & Engagement' },
+  { icon: <FiCheckSquare size={32} />, title: 'Account Setup, Recovery & Verification' },
+  { icon: <FiUsers size={32} />, title: 'Niche Audience Targeting' },
+  { icon: <FiShare2 size={32} />, title: 'Influencer Collaboration Setup' },
+  { icon: <FiBriefcase size={32} />, title: 'Brand Consulting' },
+  { icon: <FiLock size={32} />, title: 'Safe Middleman Deals' },
 ];
 
 const Services = () => {
@@ -17,6 +18,7 @@ const Services = () => {
       <div className="services-grid">
         {services.map((service, index) => (
           <div className="service-card glass-panel" key={index}>
+            {service.icon}
             <h3>{service.title}</h3>
           </div>
         ))}

@@ -1,9 +1,22 @@
 .footer {
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(10px);
-  padding: 20px;
+  background: transparent; /* Make footer transparent to see the main background */
+  padding: 2rem;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden; /* Hide overflowing pseudo-elements */
+}
+
+/* Subtle gradient top border */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(150, 90, 255, 0.5), transparent);
+  box-shadow: 0 0 10px rgba(150, 90, 255, 0.3);
 }
 
 .footer-content {
@@ -16,25 +29,38 @@
 }
 
 .footer-content p {
-  color: #A9B4C2;
+  color: #A6A6B0; /* Use the new subtext color */
+  margin: 0;
 }
 
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Use the global link style */
 .footer-links a {
-  color: #EAEAEA;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s ease;
+  position: relative;
 }
 
-.footer-links a:hover {
-  color: #A9B4C2;
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #965AFF, #EAEAEA);
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
-  }
-  .footer-links {
-    margin-top: 10px;
+    gap: 1rem;
   }
 }

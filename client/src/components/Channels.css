@@ -1,112 +1,67 @@
 .channels {
-  padding: 4rem 2rem;
+  padding: 100px 20px;
   text-align: center;
-}
-
-.channels h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #fff;
-  font-weight: 600;
 }
 
 .links-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Restored original minmax */
   gap: 1.5rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2rem auto 0;
 }
 
 .link-card {
+  /* Inherit the new glass-panel style */
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
   padding: 2rem;
   text-decoration: none;
-  color: #fff;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  position: relative;
-  overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-}
-
-.link-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(173, 216, 230, 0.1), transparent, transparent);
-  transform: rotate(0deg);
-  transition: transform 0.5s ease;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.link-card:hover::before {
-  transform: rotate(180deg);
+  gap: 1rem;
+  min-height: 150px;
 }
 
 .link-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(173, 216, 230, 0.3);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(173, 216, 230, 0.2);
+  box-shadow: 0 0 20px rgba(150, 90, 255, 0.5);
 }
 
-.link-card i {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #add8e6;
+.link-card svg {
+  color: #F1F1F3;
   transition: color 0.3s ease;
-  z-index: 2;
 }
 
-.link-card:hover i {
-  color: #fff;
+.link-card:hover svg {
+  color: #965AFF;
 }
 
 .link-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  z-index: 2;
+  margin: 0;
+  background: linear-gradient(90deg, #965AFF, #EAEAEA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
+/* --- Swiper Styles for Mobile --- */
 .mySwiper {
   width: 100%;
-  height: 100%;
+  padding-bottom: 2rem; /* Space for pagination */
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+  height: auto; /* Allow slide to size to content */
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.swiper-pagination-bullet-active {
+  background: #965AFF !important;
 }

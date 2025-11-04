@@ -5,10 +5,9 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0C0C0F;
-  color: #A9B4C2;
+  color: #A6A6B0; /* Updated subtext color */
   letter-spacing: 0.5px;
-  background: #0C0C0F radial-gradient(circle at top left, rgba(150, 90, 255, 0.15), transparent 70%);
+  background: radial-gradient(circle at top left, #0C0C0F 0%, #050507 100%); /* Updated background */
   overflow-x: hidden;
   position: relative;
 }
@@ -25,11 +24,10 @@ body::after {
   z-index: -1;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  color: #EAEAEA;
+  color: #F1F1F3; /* Updated heading color */
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
@@ -47,13 +45,16 @@ p {
 }
 
 a {
-  color: #C0D0FF;
+  background: linear-gradient(90deg, #965AFF, #EAEAEA); /* Gradient link color */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: filter 0.3s ease;
 }
 
 a:hover {
-  color: #FFFFFF;
+  filter: brightness(1.2); /* Brighter on hover for gradient */
 }
 
 code {
@@ -62,10 +63,10 @@ code {
 }
 
 .glass-panel {
+  background: rgba(255, 255, 255, 0.05); /* Updated glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Updated glass effect */
   backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
+  border-radius: 18px; /* Updated glass effect */
   padding: 2rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }

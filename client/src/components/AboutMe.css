@@ -19,22 +19,38 @@
 }
 
 .feature-card {
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 15px;
+  /* Inherit the new glass-panel style */
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 2rem;
   width: 200px;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(150, 90, 255, 0.4);
+  box-shadow: 0 0 25px rgba(150, 90, 255, 0.5);
+}
+
+/* Style for the new icons */
+.feature-card svg {
+  color: #F1F1F3;
+  transition: color 0.3s ease;
+}
+
+.feature-card:hover svg {
+  color: #965AFF;
 }
 
 .feature-card h3 {
-  margin-top: 10px;
+  margin: 0; /* Remove default margin */
   font-size: 1.2rem;
 }
 
@@ -48,5 +64,6 @@
   }
   .feature-card {
     width: 100%;
+    max-width: 300px;
   }
 }

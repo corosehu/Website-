@@ -11,6 +11,7 @@ import AnimatedSection from './components/AnimatedSection';
 import ParticlesBackground from './components/ParticlesBackground';
 import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
+import ScrollToTopButton from './components/ScrollToTopButton'; // Corrected import path
 
 const SectionDivider = () => <div className="section-divider" />;
 
@@ -47,6 +48,7 @@ function App() {
         </AnimatedSection>
         <Footer />
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }
