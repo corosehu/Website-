@@ -16,3 +16,13 @@
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(150, 90, 255, 0.4);
 }
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
